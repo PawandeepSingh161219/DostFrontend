@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "../data/DataTable.module.scss"
-import CheckBox from "../checkbox/Checkbox";
+import CheckBox from "../checkbox/CheckBox";
 export default function DataTable(
     {
     columns = [],
