@@ -1,0 +1,53 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 40px;
+}
+
+.image {
+  width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.infoSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.unit {
+  color: #c8a96e;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.name {
+  font-size: 32px;
+}
+
+.description {
+  color: #666;
+  line-height: 1.6;
+}
+
+.price {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.button {
+  width: fit-content;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  background: black;
+  color: white;
+}
+
+.status {
+  padding: 40px;
+  text-align: center;
+}

@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.dashboardpage {
+    padding: 10px;
+    background-color: aquamarine;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.dashboardContainerLeft {
+    padding: 10px;
+    background-color: lawngreen;
+}
+
+.dashboardContainerRight {
+    padding: 10px;
+    background-color: plum;
+
+    
+    .updateForm{
+        background-color: red;
+        padding: 10px;
+        form{
+            display: grid;
+        }
+    }
+}

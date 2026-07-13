@@ -1,0 +1,77 @@
+// ── Namespaced Sass built-ins (Dart Sass 3.0+)
+@use 'sass:list';
+@use 'sass:math';
+@use 'sass:color';
+
+// ── Tokens ───────────────────────────────────
+$color-bg:      #080810;
+$bar-width:     10px;
+$bar-gap:       7px;
+$anim-duration: 1.3s;
+$anim-step:     0.12s;
+
+// Bar config: (height, color)
+// camelCase class names required for CSS Modules dot-notation
+$bars: (
+  1: (18px, #a78bfa),
+  2: (34px, #c084fc),
+  3: (54px, #e879f9),
+  4: (72px, #f472b6),
+  5: (54px, #e879f9),
+  6: (34px, #c084fc),
+  7: (18px, #a78bfa),
+);
+
+// ── Keyframes ────────────────────────────────
+// @keyframes are global even in CSS Modules — prefix to avoid collisions
+@keyframes pulseBarAnim {
+  0%, 100% { transform: scaleY(0.35); opacity: 0.35; }
+  50%       { transform: scaleY(1);   opacity: 1;    }
+}
+
+// ── Stage ────────────────────────────────────
+.stage {
+  min-height: 100vh;
+  background: $color-bg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image:
+    radial-gradient(ellipse 55% 45% at 10% 90%, color.change(#f472b6, $alpha: 0.10) 0%, transparent 70%),
+    radial-gradient(ellipse 45% 55% at 90% 10%, color.change(#a78bfa, $alpha: 0.08) 0%, transparent 70%);
+}
+
+// ── Pulse Loader ─────────────────────────────
+.loaderPulse {
+  display: flex;
+  align-items: center;
+  gap: $bar-gap;
+  height: 72px;
+}
+
+// ── Bar base mixin ───────────────────────────
+@mixin bar-base {
+  width: $bar-width;
+  border-radius: 999px;
+  transform-origin: center bottom;
+  animation: pulseBarAnim $anim-duration ease-in-out infinite;
+}
+
+// ── Generate bar classes: .pulseBar1 … .pulseBar7
+@each $n, $props in $bars {
+  $h:     list.nth($props, 1);   // ✅ namespaced — no deprecation warning
+  $col:   list.nth($props, 2);   // ✅ namespaced — no deprecation warning
+
+  .pulseBar#{$n} {
+    @include bar-base;
+    height: $h;
+    background: $col;
+    box-shadow: 0 0 10px color.change($col, $alpha: 0.6);
+    animation-delay: #{math.div($n - 1, 1) * $anim-step};
+  }
+}
+
+// ── Peak bar override ────────────────────────
+.pulseBar4 {
+  box-shadow: 0 0 14px color.change(#f472b6, $alpha: 0.7);
+}

@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "OpenSans";
+  src: url("./src/assets/font/OpenSans_Condensed-Regular.ttf") format("truetype");
+  font-style: normal;
+}
+html{
+    font-family: 'OpenSans';
+    letter-spacing: 1px;
+}

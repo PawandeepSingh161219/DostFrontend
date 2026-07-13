@@ -1,0 +1,41 @@
+
+ .filterHeaderDataContainer {
+    width: 100%;
+        padding: 10px;
+        background-color: cornflowerblue;
+        display: grid;
+        grid-auto-flow: column;
+        gap: 10px;
+
+        .searchIcon {
+            padding: 10px;
+            background-color: hotpink;
+            // width: 1%;
+        }
+
+        .searchByName {
+            
+            background-color: seagreen;
+            padding: 10px;
+            
+            input{
+                width: 100%;
+                padding: 5px;
+            }
+        }
+
+        .searchByDepartment {
+            padding: 10px;
+            background-color: navy;
+            width: auto;
+            select{
+                padding: 5px;
+                width: 100%;
+            }
+        }
+
+        .editData {
+            padding: 10px;
+            background-color: lightcoral;
+        }
+    }

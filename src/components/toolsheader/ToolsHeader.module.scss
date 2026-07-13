@@ -1,0 +1,32 @@
+.toolsHeader{
+        padding: 10px;
+        background-color: blueviolet;
+        display: grid;
+        grid-template-columns: 20px,20px,20px,20px;
+        grid-auto-flow: column;
+        gap: 10px;
+        .toolone{
+            padding: 10px;
+            background-color: pink;
+            display: flex;
+            justify-content: center;
+        }
+        .tooltwo{
+            padding: 10px;
+            background-color: pink;
+            display: flex;
+            justify-content: center;
+        }
+        .toolthree{
+            padding: 10px;
+            background-color: pink;
+            display: flex;
+            justify-content: center;
+        }
+        .toolfour{
+            padding: 10px;
+            background-color: pink;
+            display: flex;
+            justify-content: center;
+        }
+    }

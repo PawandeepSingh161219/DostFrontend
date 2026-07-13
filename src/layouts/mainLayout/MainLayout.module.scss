@@ -1,0 +1,184 @@
+.layout {
+  min-height: 100vh;
+
+  display: flex;
+
+  flex-direction: column;
+ 
+}
+
+
+
+/* ======================
+   HEADER
+====================== */
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+
+  border-bottom: 1px solid rgb(24, 24, 24);
+
+  background: rgb(42, 41, 41);
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 100;
+}
+
+
+
+/* ======================
+   MAIN
+====================== */
+
+.main {
+  flex: 1;
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  background-color:  #f8f9fb;
+  // background-color:  yellow;
+
+
+}
+
+
+
+/* ======================
+   SHARED CONTAINER
+====================== */
+
+.container {
+//   width: min(1200px, calc(100% - 2rem));
+
+//   margin-inline: auto;
+  width: 90%;
+  // padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // background-color: yellow;
+
+ }
+
+
+
+/* ======================
+   PAGE WRAPPER
+====================== */
+
+.pageWrapper {
+  width: 90%;
+
+  // padding-block: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  // background-color: yellow;
+  // flex-direction: column;
+}
+
+
+
+/* ======================
+   FOOTER
+====================== */
+
+.footer {
+  margin-top: auto;
+
+  border-top: 1px solid #e5e7eb;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// *{
+//     margin: 0;
+//     padding: 0;
+//     box-sizing: border-box;
+
+// }
+
+// .app{
+//     height: 100vh;
+//     // background-color: cadetblue;
+//     display: flex;
+//     flex-direction: column;
+// }
+// .header{
+//     width: 100%;
+//     padding: 10px;
+//     // background-color: red;
+//     display: flex;
+//     justify-content: center;
+// }
+// .headerContainer{
+//     width: 90%;
+//     padding: 10px 0;
+//     // background-color: green;
+// }
+// .main{
+    
+//     padding: 10px;
+//     // background-color: blue;
+//     display: flex;
+//     flex: 1;
+//     justify-content: center;
+// }
+// .pageWrapper{
+//     width: 90%;
+//     padding: 10px 0;
+//     // background-color: beige;
+//     display: flex;
+//     justify-content: center;
+//     align-items:start ;
+    
+    
+// }

@@ -1,0 +1,58 @@
+.signupPage {
+padding: 10px;
+background-color: red;
+}
+
+
+.signupContainer {
+width: 350px;
+padding: 25px;
+background-color: aquamarine;
+border-radius: 12px;
+// box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+text-align: center;
+ h2 {
+margin-bottom: 20px;
+font-size: 22px;
+}
+
+form {
+display: flex;
+flex-direction: column;
+gap: 12px;
+
+input {
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 6px;
+font-size: 14px;
+}
+button {
+padding: 10px;
+background-color: #2563eb;
+color: white;
+border: none;
+border-radius: 6px;
+cursor: pointer;
+font-size: 15px;
+}
+
+
+}
+
+
+}
+
+.loginText {
+margin-top: 15px;
+font-size: 14px;
+ a {
+color: #2563eb;
+text-decoration: none;
+}
+&:hover {
+text-decoration: underline;
+}
+}
+
+
